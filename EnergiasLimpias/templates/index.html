@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energías Limpias en Colombia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-leaf"></i>
+                <span>EcoEnergía Colombia</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#estadisticas" class="nav-link">Estadísticas</a></li>
+                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                <li><a href="#regiones" class="nav-link">Regiones</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Energías Limpias en Colombia</h1>
+                <p>Descubre el futuro sostenible de la energía en nuestro país. Colombia lidera la transición hacia fuentes de energía renovable y limpia.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToSection('estadisticas')">
+                        <i class="fas fa-chart-line"></i> Ver Estadísticas
+                    </button>
+                    <button class="btn-secondary" onclick="scrollToSection('proyectos')">
+                        <i class="fas fa-solar-panel"></i> Explorar Proyectos
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="energy-animation">
+                    <div class="solar-panel">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <div class="wind-turbine">
+                        <i class="fas fa-fan"></i>
+                    </div>
+                    <div class="hydro-power">
+                        <i class="fas fa-water"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number">68%</span>
+                <span class="stat-label">Energía Hidroeléctrica</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">3%</span>
+                <span class="stat-label">Energías Renovables No Convencionales</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">55+</span>
+                <span class="stat-label">Proyectos Activos</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Estadísticas -->
+    <section id="estadisticas" class="statistics">
+        <div class="container">
+            <div class="section-header">
+                <h2>Matriz Energética Colombiana</h2>
+                <p>Conoce la distribución actual de fuentes de energía en Colombia</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="chart-container">
+                    <canvas id="energyChart"></canvas>
+                </div>
+                
+                <div class="stats-cards">
+                    <div class="stat-card hydro">
+                        <div class="card-icon">
+                            <i class="fas fa-water"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Hidroeléctrica</h3>
+                            <p class="percentage">68%</p>
+                            <p class="capacity">17,500 MW</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card solar">
+                        <div class="card-icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Solar</h3>
+                            <p class="percentage">1.5%</p>
+                            <p class="capacity">400 MW</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card wind">
+                        <div class="card-icon">
+                            <i class="fas fa-fan"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Eólica</h3>
+                            <p class="percentage">1.5%</p>
+                            <p class="capacity">380 MW</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card thermal">
+                        <div class="card-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Térmica</h3>
+                            <p class="percentage">29%</p>
+                            <p class="capacity">7,400 MW</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Proyectos Destacados</h2>
+                <p>Iniciativas que están transformando el panorama energético de Colombia</p>
+            </div>
+            
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Los proyectos se cargarán dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Regiones -->
+    <section id="regiones" class="regions">
+        <div class="container">
+            <div class="section-header">
+                <h2>Potencial por Regiones</h2>
+                <p>Explora el potencial de energías limpias en cada región de Colombia</p>
+            </div>
+            
+            <div class="regions-grid" id="regionsGrid">
+                <!-- Las regiones se cargarán dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Únete al Cambio</h2>
+                <p>Contribuye al desarrollo sostenible de Colombia</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@ecoenergia.co</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p>+57 1 234 5678</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Ubicación</h4>
+                            <p>Bogotá, Colombia</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Mensaje" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EcoEnergía Colombia</h3>
+                    <p>Impulsando el futuro sostenible de Colombia a través de energías limpias y renovables.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Enlaces Útiles</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#estadisticas">Estadísticas</a></li>
+                        <li><a href="#proyectos">Proyectos</a></li>
+                        <li><a href="#regiones">Regiones</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Recursos</h3>
+                    <ul>
+                        <li><a href="#">Documentación</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Noticias</a></li>
+                        <li><a href="#">Eventos</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 EcoEnergía Colombia. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
