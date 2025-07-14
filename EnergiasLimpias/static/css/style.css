@@ -467,6 +467,59 @@ body {
     margin-bottom: 1rem;
 }
 
+.energias-info {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+/* Estilo general para la tabla */
+.regions-summary table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para las celdas de la tabla */
+.regions-summary th, .regions-summary td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Encabezado de la tabla */
+.regions-summary th {
+    background-color: #4CAF50; /* Verde oscuro */
+    color: white;
+    font-weight: bold;
+}
+
+/* Filas alternas de la tabla */
+.regions-summary tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Efecto hover para filas */
+.regions-summary tr:hover {
+    background-color: #ddd;
+}
+
+/* Estilo para las celdas del primer columna (Región) */
+.regions-summary td:first-child {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilo para la cabecera h3 */
+.regions-summary h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
 .status-operativo {
     background: #d1fae5;
     color: #065f46;
